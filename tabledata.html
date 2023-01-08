@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/4.1.0/js/dataTables.fixedColumns.min.js"></script>
+
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        table{
+            margin: 0;
+            width: 100% !important;
+            table-layout: fixed; // ***********add this
+            word-break: break-word !important;
+        }
+        thead tr th:first-child,
+        tbody tr td:first-child {
+            width: 7%;
+            word-break: break-word;
+        }
+        thead tr th:nth-child(2),
+        tbody tr th:nth-child(2) {
+            width: 70%;
+            word-break: inherit;
+        } 
+        thead tr th:nth-child(1),
+        tbody tr th:nth-child(1) {
+            width: 23%;
+            word-break: inherit !important;
+        }                 
+        td{
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+
+
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip(); 
+            var dataSet = [
+                ['01.c.111111111111111111111111111111111111111111111111113', 'AAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAA','AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
+                ['01.c.2', 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCBBBBBB','AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
+            ];
+            var dataSet2 = [
+                ['BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCBBBBBB', 'CCCCCCCCCCCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC','AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
+                ['01.c.2', 'DDDDDDDDDDDDDDDDD  DDDDDDDDDDDDDDDDDDDDDDDDDDDDD DDDDDDDDDDDDDDDDDDD DDDDDDDDDDDDDDDDDDD DDDDDDDDDDDDDDDDDDDDDDDDD DDDDDDDDDDDDDDDD DDDDDDDDDDDDDDDDDDD DDDDDDDDDDDDDDDDD DDDDDDDDDDDDD','AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
+            ];
+            var dataSet3 = [
+                ['01.c.3', 'EEEEEEEEEEEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE','AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'],
+                ['01.c.2', 'GGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG','01.c.2'],
+        ];
+
+            var table0 = $('#table1').removeAttr('width').DataTable({
+                data: dataSet,
+                bAutoWidth: false,
+                "autoWidth": false,
+                columns: [
+                    { title: 'Name'},
+                    { title: 'Position' },
+                    { title: 'Position2' },
+                 ],
+                "searching": false,
+                "info":false,
+                "ordering": false,
+                "dom": 't',
+            });
+            $("#table1header").remove();
+
+            var table2 = $('#table2').removeAttr('width').DataTable({
+                data: dataSet2,
+                columns: [
+                    { title: 'Name2' },
+                    { title: 'Position2' },
+                    { title: 'Position2' },
+                    
+                 ],
+                "searching": false,
+                "info":false,
+                "ordering": false,
+                "dom": 't',
+            });
+            $("#table2header").remove();
+
+
+            var table3 = $('#table3').removeAttr('width').DataTable({
+                data: dataSet3,
+                columns: [
+                    { title: 'Name3'  },
+                    { title: 'Position3' },
+                    { title: 'Position3' },
+                 ],
+                "searching": false,
+                "info":false,
+                "ordering": false,
+                "dom": 't',
+            });
+            $("#table3header").remove();
+        });
+    </script>
+
+    <style>
+      
+    </style>
+    
+</head>
+<body>
+    <div class="row">
+        <div class="col-12 mb-4">
+          <h2>TODO</h2>
+        </div>
+    </div>
+    
+    <table id="table1" data-toggle="tooltip" title="click to hide">
+        <thead id="table1header">
+        </thead>
+    </table>
+    
+    <h2>TO DO</h2>
+    <table id="table2" >
+        <thead id="table2header">
+        </thead>
+    </table> 
+
+    <h2>TODO</h2>
+    <table id="table3" >
+        <thead id="table3header">
+        </thead>                    
+    </table>
+
+
+
+</body>
+
+
+
+
+</html>
+

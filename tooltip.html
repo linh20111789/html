@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <a href="http://www.niemvuilaptrinh.com/" class="text-muted">
+    Niềm Vui Lập Trình
+  </a>
+    <div class="mt-4">
+      <h3 data-toggle="tooltip" title="Xin Chào Các Bạn">Ví dụ về Tooltip</h3>
+      <a href="#" data-toggle="tooltip" title="Xin Chào Các Bạn">Hover liên kết</a>
+    </div>
+
+    
+  <table data-toggle="tooltip" title="click to hide">
+    <tr>
+      <th>Person 1</th>
+      <th>Person 2</th>
+      <th>Person 3</th>
+      <th>Person 1</th>
+      <th>Person 2</th>
+      <th>Person 3</th>      
+    </tr>
+    <tr>
+      <td>Ernst Handel</td>
+      <td>Roland Mendel</td>
+      <td>Austria</td>
+      <td>Island Trading</td>
+      <td>Helen Bennett</td>
+      <td>UK</td> 
+    </tr>
+    <tr >
+      <td>Island Trading</td>
+      <td>Helen Bennett</td>
+      <td>UK</td>
+      <td>Island Trading</td>
+      <td>Helen Bennett</td>
+      <td title="This is Title" >UK</td>
+
+
+    </tr>
+  </table>
+
+
+  </div>
+
+
+
+
+
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+      //$("th").removeAttr("data-toggle");
+      $("th").tooltip("disable");
+    });
+  </script>
+</body> 
+</html>
